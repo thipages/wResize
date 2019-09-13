@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <title>wResize</title>
     <script type="module">
-        import {wResize,wDimension} from "./../esm/index.js"
+        import {winResize,winDimension} from "./../esm/index.js"
         const format=d=>`${d.w} x ${d.h}`;
         const callback=(d)=> {
             document.getElementsByTagName("div")[0].innerHTML=`inner: ${format(d)}`;
-            document.getElementsByTagName("div")[1].innerHTML=`outer: ${format(wDimension(false))}`;
+            document.getElementsByTagName("div")[1].innerHTML=`outer: ${format(winDimension(false))}`;
         };
         // register callback
-        wResize(callback);
+        winResize(callback);
         // shows dimension at start
-        document.addEventListener("DOMContentLoaded",()=>callback(wDimension()));
+        document.addEventListener("DOMContentLoaded",()=>callback(winDimension()));
 
     </script>
 </head>
