@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>wResize</title>
+    <script type="module">
+        import {wResize,wDimension} from "./../esm/index.js"
+        const callback=(d)=> document.getElementsByTagName("div")[0].innerHTML=`dimension: ${d.w}x${d.h}`;
+        // register callback
+        wResize(callback);
+        // shows dimension at start
+        callback(wDimension());
+    </script>
+</head>
+<body>
+<div></div>
+
+</body>
+</html>
